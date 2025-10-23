@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Loader2 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import {SidebarComponent} from "@/components/sidebar/SidebarComponent";
 
 // Type pour un produit
@@ -54,7 +55,7 @@ const generateMockProducts = (page: number): Product[] => {
     return products;
 };
 
-export default function HomePage() {
+export default function ListingPage() {
     const [products, setProducts] = useState<Product[]>([]);
     const [page, setPage] = useState(0);
     const [loading, setLoading] = useState(false);
@@ -112,16 +113,16 @@ export default function HomePage() {
     return (
         <div className="min-h-screen bg-gray-50 flex">
             {/* Header */}
-            <SidebarComponent />
+                <SidebarComponent />
 
             <div className="w-full ">
                 <div className="bg-white border-b sticky top-0 z-10">
                     <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-                        <h1 className="text-2xl font-bold">Liste des articles</h1>
-                        {/*<div className="flex items-center gap-2 text-sm text-gray-600">
-                            <MapPin className="w-4 h-4 text-yellow-600" />
-                            <span className="text-yellow-600">Abidjan · 65 km</span>
-                        </div>*/}
+                        <h1 className="text-2xl font-bold">Today's picks</h1>
+                        <div className="flex items-center gap-2 text-sm text-gray-600">
+                            <MapPin className="w-4 h-4 text-blue-600" />
+                            <span className="text-blue-600">Abidjan · 65 km</span>
+                        </div>
                     </div>
                 </div>
 
@@ -162,7 +163,7 @@ export default function HomePage() {
                     {/* Loading indicator */}
                     {loading && (
                         <div className="flex justify-center items-center py-8">
-                            <Loader2 className="w-8 h-8 animate-spin text-yellow-600" />
+                            <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
                         </div>
                     )}
 
