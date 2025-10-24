@@ -3,8 +3,9 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { MapPin, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import {SidebarComponent} from "@/components/sidebar/SidebarComponent";
+import {Button} from "@/components/ui/button";
 
 // Type pour un produit
 interface Product {
@@ -122,6 +123,11 @@ export default function HomePage() {
                             <MapPin className="w-4 h-4 text-yellow-600" />
                             <span className="text-yellow-600">Abidjan · 65 km</span>
                         </div>*/}
+                        <Button variant={'outline'} className={'bg-yellow-400'} asChild>
+                            <Link href={'/login'}>
+                                Se connecter
+                            </Link>
+                        </Button>
                     </div>
                 </div>
 
@@ -129,9 +135,9 @@ export default function HomePage() {
                 {/* Grid de produits */}
                 <div className="max-w-7xl mx-auto px-4 py-6">
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-                        {products.map((product) => (
+                        {products.map((product, index) => (
                             <Link
-                                key={product.id}
+                                key={index}
                                 href={`/product/${product.id}`}
                                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow group"
                             >
