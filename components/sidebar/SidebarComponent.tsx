@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import {SellingComponent} from "@/components/SellingComponent";
 
 const mainMenuItems = [
     { icon: Store, label: "Tout", href: "/browse" },
@@ -111,10 +112,8 @@ export const SidebarComponent = () =>{
 
             {/* Create Listing Button */}
             <div className="px-4 py-4">
-                <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold">
-                    <Plus className="w-4 h-4 mr-2" />
-                    Vendre un produit
-                </Button>
+
+                <SellingComponent/>
             </div>
 
             <Separator />
