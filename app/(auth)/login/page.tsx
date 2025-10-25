@@ -55,7 +55,7 @@ export default function LoginPage() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-indigo-100 p-4">
+        // <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-indigo-100 p-4">
             <div className="w-full max-w-md">
                 {/* Card */}
                 <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -232,6 +232,6 @@ export default function LoginPage() {
                     </button>
                 </p>
             </div>
-        </div>
+        // </div>
     )
 }

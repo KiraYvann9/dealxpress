@@ -56,7 +56,7 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-indigo-100 p-4 py-12">
+        // <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-indigo-100 p-4 py-12">
             <div className="w-full max-w-md">
                 {/* Card */}
                 <div className="bg-white rounded-2xl shadow-xl p-8">
@@ -293,7 +293,7 @@ export default function RegisterPage() {
                     <div className="text-center mt-6">
                         <p className="text-sm text-gray-600">
                             Vous avez déjà un compte ?{" "}
-                            <Link href="/app/(auth)/login"
+                            <Link href="/login"
                                 className="text-yellow-600 hover:text-yellow-700 font-semibold"
                             >
                                 Se connecter
@@ -302,6 +302,6 @@ export default function RegisterPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }

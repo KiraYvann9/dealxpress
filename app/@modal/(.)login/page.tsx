@@ -207,17 +207,6 @@ export default function LoginModal () {
                             </Button>
                         </div>
 
-                        {/* Sign up link */}
-                        {/*<div className="text-center mt-6">
-                            <p className="text-sm text-gray-600">
-                                Vous n'avez pas de compte ?{" "}
-                                <Link href="/register"
-                                      className="text-yellow-600 hover:text-yellow-700 font-semibold"
-                                >
-                                    S'inscrire
-                                </Link>
-                            </p>
-                        </div>*/}
                     </div>
 
                     {/* Footer */}

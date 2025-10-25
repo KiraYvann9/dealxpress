@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import {SidebarComponent} from "@/components/sidebar/SidebarComponent";
 import {Button} from "@/components/ui/button";
+import {ProductSkeleton} from "@/components/ProducSkeleton";
 
 // Type pour un produit
 interface Product {
@@ -123,11 +124,20 @@ export default function HomePage() {
                             <MapPin className="w-4 h-4 text-yellow-600" />
                             <span className="text-yellow-600">Abidjan · 65 km</span>
                         </div>*/}
-                        <Button variant={'outline'} className={'bg-yellow-400'} asChild>
-                            <Link href={'/login'}>
-                                Se connecter
-                            </Link>
-                        </Button>
+
+                        <div className={'space-x-2'}>
+
+                            <Button variant={'outline'} asChild>
+                                <Link href={'/register'}>
+                                    Créer un compte
+                                </Link>
+                            </Button>
+                            <Button variant={'outline'} className={'bg-yellow-400'} asChild>
+                                <Link href={'/login'}>
+                                    Se connecter
+                                </Link>
+                            </Button>
+                        </div>
                     </div>
                 </div>
 
@@ -167,8 +177,13 @@ export default function HomePage() {
 
                     {/* Loading indicator */}
                     {loading && (
-                        <div className="flex justify-center items-center py-8">
-                            <Loader2 className="w-8 h-8 animate-spin text-yellow-600" />
+                        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                            {/*<Loader2 className="w-8 h-8 animate-spin text-yellow-600" />*/}
+                            <ProductSkeleton/>
+                            <ProductSkeleton/>
+                            <ProductSkeleton/>
+                            <ProductSkeleton/>
+                            <ProductSkeleton/>
                         </div>
                     )}
 
